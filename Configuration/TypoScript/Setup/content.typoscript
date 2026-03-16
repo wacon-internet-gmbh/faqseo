@@ -1,0 +1,15 @@
+tt_content {
+  faqseo_faq =< lib.contentElement
+  faqseo_faq {
+    templateName = Faq
+
+    settings {
+      assets {
+        faq {
+          css = EXT:faq_seo/Resources/Public/Css/faq.css
+          js =
+        }
+      }
+    }
+  }
+}

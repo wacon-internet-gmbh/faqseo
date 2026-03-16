@@ -1,0 +1,4 @@
+name: wacon/faqseo-base
+label: FAQ SEO
+dependencies:
+  - typo3/fluid-styled-content

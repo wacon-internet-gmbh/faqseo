@@ -1,0 +1,49 @@
+.faq.accordion-item,
+.faq.accordion-item:last-of-type {
+    background-color: transparent;
+    border: none;
+    color: var(--bs-white);
+}
+
+.faq .accordion-body {
+    padding: 0;
+}
+
+.faq > .accordion-button {
+    width: 100%;
+    text-align: left;
+    color: var(--bs-white);
+    background-color: var(--bs-black);
+    padding: 1rem 2rem 1rem 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 0.313rem;
+    border: 0;
+    outline: 0;
+}
+
+.faq > .accordion-button:focus,
+.faq .accordion-button:not(.collapsed) {
+    box-shadow: none;
+}
+
+.faq > .accordion-button:focus {
+    outline: 0;
+}
+
+.faq > .accordion-button[aria-expanded="false"] {
+    color: var(--bs-body-color);
+    background-color: transparent;
+    border: 1px solid var(--bs-body-color);
+}
+
+.faq > .accordion-collapse {
+    border: 0;
+    padding: 0.2rem 1rem 0.5rem 1rem;
+    margin-top: 1rem;
+}
+
+.faq + .faq,
+.frame-type-contentkit_faq + .frame-type-contentkit_faq {
+    margin-top: 1.5rem;
+}

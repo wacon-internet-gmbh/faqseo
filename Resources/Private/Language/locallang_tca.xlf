@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:faq_seo/Resources/Private/Language/locallang" date="2026-03-16T09:44:12Z" product-name="faq_seo">
+		<header/>
+		<body>
+			<trans-unit id="faq.header" resname="faq.header">
+				<source>Question</source>
+			</trans-unit>
+			<trans-unit id="faq.bodytext" resname="faq.bodytext">
+				<source>Answer</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

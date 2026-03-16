@@ -1,0 +1,11 @@
+lib.contentElement {
+  layoutRootPaths {
+    201 = EXT:faq_seo/Resources/Private/Layouts/ContentElements/
+  }
+  templateRootPaths {
+    201 = EXT:faq_seo/Resources/Private/Templates/ContentElements/
+  }
+  partialRootPaths {
+    201 = EXT:faq_seo/Resources/Private/Partials/ContentElements/
+  }
+}
