@@ -53,7 +53,7 @@ class TtContent extends Base
                 'description' => $this->getLLL('locallang_db.xlf:ctype.' . $key . '.description'),
                 'value' => $key,
                 'group' => 'default',
-                'icon' => 'mimetypes-x-content-text-media'
+                'icon' => 'mimetypes-x-content-text-media',
             ]
         );
         $GLOBALS['TCA']['tt_content']['types'][$key] = [
