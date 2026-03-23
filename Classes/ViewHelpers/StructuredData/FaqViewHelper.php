@@ -49,7 +49,7 @@ final class FaqViewHelper extends AbstractViewHelper
         $structuredData = [
             '@context' => 'https://schema.org',
             '@type' => 'FAQPage',
-            'mainEntity' => []
+            'mainEntity' => [],
         ];
 
         foreach ($items as $item) {
@@ -58,7 +58,7 @@ final class FaqViewHelper extends AbstractViewHelper
                 'name' => $item['header'],
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => \strip_tags($item['bodytext'])
+                    'text' => \strip_tags($item['bodytext']),
                 ]
             ];
         }
