@@ -20,7 +20,6 @@ namespace Wacon\FaqSeo\Bootstrap\TCA;
 use TYPO3\CMS\Core\Information\Typo3Version;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 use Wacon\FaqSeo\Bootstrap\Base;
 use Wacon\FaqSeo\Bootstrap\Traits\TcaTrait;
 use Wacon\FaqSeo\Registry\ContentRegistry;
