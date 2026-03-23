@@ -4,6 +4,9 @@ categories:
   FaqSeo.templates:
     label: 'Templates'
     parent: FaqSeo
+  FaqSeo.assets:
+    label: 'Assets'
+    parent: FaqSeo
 
 settings:
   faq_seo.templates.templateRootPath:
@@ -24,3 +27,16 @@ settings:
     description: 'Path to layout root'
     type: string
     default: 'EXT:faq_seo/Resources/Private/Layouts/'
+
+  FaqSeo.assets.faq.css:
+    label: 'FAQ CSS'
+    category: FaqSeo.assets
+    description: 'Path to FAQ CSS file'
+    type: string
+    default: 'EXT:faq_seo/Resources/Public/Css/faq.css'
+  FaqSeo.assets.faq.js:
+    label: 'FAQ JavaScript'
+    category: FaqSeo.assets
+    type: string
+    description: 'Path to FAQ JavaScript file'
+    default: 'EXT:faq_seo/Resources/Public/JavaScript/BootstrapAccordion.js'

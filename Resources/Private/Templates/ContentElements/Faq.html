@@ -9,10 +9,10 @@
     <f:section name="Footer"></f:section>
     <f:section name="Main">
         <f:if condition="{settings.assets.faq.css}">
-            <f:asset.css identifier="contentkit_faq" href="{settings.assets.faq.css}" />
+            <f:asset.css identifier="faqseo_faq" href="{settings.assets.faq.css}" />
         </f:if>
         <f:if condition="{settings.assets.faq.js}">
-            <f:asset.script identifier="contentkit_faq" src="{settings.assets.faq.js}" />
+            <f:asset.script identifier="faqseo_faq" src="{settings.assets.faq.js}" />
         </f:if>
         <div class="faq accordion-item">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{data.uid}" aria-expanded="false" aria-controls="collapse{data.uid}">{data.header}</button>

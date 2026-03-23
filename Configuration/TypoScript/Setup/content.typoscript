@@ -6,8 +6,8 @@ tt_content {
     settings {
       assets {
         faq {
-          css = EXT:faq_seo/Resources/Public/Css/faq.css
-          js =
+          css = {$FaqSeo.assets.faq.css}
+          js = {$FaqSeo.assets.faq.js}
         }
       }
     }
