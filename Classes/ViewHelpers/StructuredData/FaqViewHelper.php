@@ -59,7 +59,7 @@ final class FaqViewHelper extends AbstractViewHelper
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
                     'text' => \strip_tags($item['bodytext']),
-                ]
+                ],
             ];
         }
         return \json_encode($structuredData, JSON_HEX_TAG);
