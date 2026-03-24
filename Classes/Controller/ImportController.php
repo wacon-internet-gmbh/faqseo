@@ -57,7 +57,7 @@ final class ImportController extends ActionController
             return $this->redirect('uploadForm', null, null, ['id' => $this->request->getQueryParams()['id']]);
         }
 
-        foreach($lines as $key => $line) {
+        foreach ($lines as $key => $line) {
             if ($uploadForm['skipFirstRow'] && $key == 0) {
                 continue;
             }

@@ -6,5 +6,4 @@ namespace Wacon\FaqSeo\Domain\Repository;
 
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
-class FaqitemRepository extends Repository
-{}
+class FaqitemRepository extends Repository {}

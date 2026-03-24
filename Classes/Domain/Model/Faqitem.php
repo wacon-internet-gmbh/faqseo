@@ -20,53 +20,51 @@ class Faqitem extends AbstractEntity
      */
     protected string $answer = '';
 
+    /**
+     * Get summary of question
+     *
+     * @return string
+     */
+    public function getQuestion(): string
+    {
+        return $this->question;
+    }
 
+    /**
+     * Set summary of question
+     *
+     * @param string  $question
+     *
+     * @return self
+     */
+    public function setQuestion(string $question): self
+    {
+        $this->question = $question;
 
-	/**
-	 * Get summary of question
-	 *
-	 * @return string
-	 */
-	public function getQuestion(): string
-	{
-		return $this->question;
-	}
+        return $this;
+    }
 
-	/**
-	 * Set summary of question
-	 *
-	 * @param string  $question
-	 *
-	 * @return self
-	 */
-	public function setQuestion(string $question): self
-	{
-		$this->question = $question;
+    /**
+     * Get summary of answer
+     *
+     * @return string
+     */
+    public function getAnswer(): string
+    {
+        return $this->answer;
+    }
 
-		return $this;
-	}
+    /**
+     * Set summary of answer
+     *
+     * @param string  $answer
+     *
+     * @return self
+     */
+    public function setAnswer(string $answer): self
+    {
+        $this->answer = $answer;
 
-	/**
-	 * Get summary of answer
-	 *
-	 * @return string
-	 */
-	public function getAnswer(): string
-	{
-		return $this->answer;
-	}
-
-	/**
-	 * Set summary of answer
-	 *
-	 * @param string  $answer
-	 *
-	 * @return self
-	 */
-	public function setAnswer(string $answer): self
-	{
-		$this->answer = $answer;
-
-		return $this;
-	}
+        return $this;
+    }
 }
