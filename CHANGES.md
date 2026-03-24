@@ -1,6 +1,6 @@
 ## Version 1.1.0
 - [FEATURE] Add FaqItem Model
-- [WIP] Add Import Backend module
+- [FEATURE] Add Import Backend module
 
 ## Version 1.0.0
 - [TASK] Add FAQ Styling

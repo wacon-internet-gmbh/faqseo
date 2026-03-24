@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Module" />
+
+<f:section name="Content">
+    <h1>
+        <f:translate key="backend.module.import.title" extensionName="faq_seo" />
+    </h1>
+    <p>
+        <f:translate key="backend.module.import.description" extensionName="faq_seo" />
+    </p>
+    <f:flashMessages />
+    <f:if condition="{selectedPageId}">
+        <f:then>
+            <f:form action="import" method="post" object="{uploadForm}" name="uploadForm" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <f:form.upload class="form-control" property="csvFile" />
+                    <div class="form-text">
+                        <f:translate key="backend.module.import.file_format_hint" extensionName="faq_seo" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check">
+                        <f:form.checkbox id="skipFirstRow" class="form-check-input" property="skipFirstRow" value="1" />
+                        <label for="skipFirstRow" class="form-check-label">
+                            <f:translate key="backend.module.import.skip_first_row" extensionName="faq_seo" />
+                        </label>
+                    </div>
+                </div>
+
+                <f:form.submit class="btn btn-primary" value="Import" />
+            </f:form>
+        </f:then>
+        <f:else>
+            <p class="alert alert-danger">
+                <f:translate key="backend.module.import.error.no_selected_page" extensionName="faq_seo" />
+            </p>
+        </f:else>
+    </f:if>
+</f:section>
+
+</html>

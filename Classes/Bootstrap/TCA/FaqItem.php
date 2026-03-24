@@ -74,7 +74,7 @@ class FaqItem extends Base
                             --palette--;;language,
                         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
                             --palette--;;hidden,--palette--;;access,
-                        '
+                    ',
                 ],
             ],
         ];

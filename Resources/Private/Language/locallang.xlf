@@ -6,6 +6,21 @@
 			<trans-unit id="backend.module.import.title" resname="backend.module.import.title">
 				<source>Import FAQ Items</source>
 			</trans-unit>
+			<trans-unit id="backend.module.import.description" resname="backend.module.import.description">
+				<source>Import FAQ Items in a csv format in selected page or folder.</source>
+			</trans-unit>
+			<trans-unit id="backend.module.import.error.no_selected_page" resname="backend.module.import.error.no_selected_page">
+				<source>No page or folder selected for import.</source>
+			</trans-unit>
+      <trans-unit id="backend.module.import.file_format_hint" resname="backend.module.import.file_format_hint">
+				<source>CSV file with comma (,) as separator and double quotes (") as escape character</source>
+			</trans-unit>
+      <trans-unit id="backend.module.import.skip_first_row" resname="backend.module.import.skip_first_row">
+				<source>Enable to skip the first row</source>
+			</trans-unit>
+      <trans-unit id="backend.module.import.error.empty_file" resname="backend.module.import.error.empty_file">
+				<source>Uploaded file is empty</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

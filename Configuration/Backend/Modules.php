@@ -13,6 +13,7 @@ return [
         ],
         'path' => '/module/web/FaqSeoImport',
         'iconIdentifier' => 'tx-faqseo-svgicon',
+        'extensionName' => 'faq_seo',
         'controllerActions' => [
             ImportController::class => [
                 'uploadForm',
