@@ -90,7 +90,7 @@ class TtContent extends Base
      */
     private function registerPlugins(): void
     {
-        ExtensionUtility::registerPlugin(
+        $pluginSignature = ExtensionUtility::registerPlugin(
             $this->getExtensionKeyAsNamespace(),
             'List',
             $this->getLLL('locallang_plugins.xlf:list.title'),
@@ -98,5 +98,14 @@ class TtContent extends Base
             'plugins',
             $this->getLLL('locallang_plugins.xlf:list.description'),
         );
+
+        if ($this->typo3MajorVersion >= 14) {
+            ExtensionManagementUtility::addToAllTCAtypes(
+                'tt_content',
+                '--div--;Configuration,pages,',
+                $pluginSignature,
+                'after:subheader',
+            );
+        }
     }
 }

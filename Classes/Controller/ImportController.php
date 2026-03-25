@@ -54,7 +54,7 @@ final class ImportController extends ActionController
         $firstLine = current($lines);
         if (empty($lines) || empty($firstLine[0])) {
             $this->addFlashMessage(LocalizationUtility::translate('backend.module.import.error.empty_file', $this->extensionKey), '', ContextualFeedbackSeverity::ERROR);
-            return $this->redirect('uploadForm', null, null, ['id' => $this->request->getQueryParams()['id']]);
+            return $this->redirect('uploadForm', null, null, ['id' => (int)$this->request->getQueryParams()['id']]);
         }
 
         foreach ($lines as $key => $line) {
@@ -65,7 +65,7 @@ final class ImportController extends ActionController
             $this->importRow($line);
         }
 
-        return $this->redirect('uploadForm', null, null, ['id' => $this->request->getQueryParams()['id']]);
+        return $this->redirect('uploadForm', null, null, ['id' => (int)$this->request->getQueryParams()['id']]);
     }
 
     /**

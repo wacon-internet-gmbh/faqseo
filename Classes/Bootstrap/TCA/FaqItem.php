@@ -56,10 +56,10 @@ class FaqItem extends Base
                 ],
             ],
             'palettes' => [
-                'general' => $GLOBALS['TCA']['tt_content']['palettes']['general'],
-                'hidden' => $GLOBALS['TCA']['tt_content']['palettes']['hidden'],
-                'access' => $GLOBALS['TCA']['tt_content']['palettes']['access'],
-                'language' => $GLOBALS['TCA']['tt_content']['palettes']['language'],
+                'general' => $GLOBALS['TCA']['tt_content']['palettes']['general'] ?? [],
+                'hidden' => $GLOBALS['TCA']['tt_content']['palettes']['hidden'] ?? [],
+                'access' => $GLOBALS['TCA']['tt_content']['palettes']['access'] ?? [],
+                'language' => $GLOBALS['TCA']['tt_content']['palettes']['language'] ?? [],
             ],
             'columns' => [
                 'hidden' => $this->getHiddenTCADef(),

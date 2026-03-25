@@ -124,6 +124,20 @@ trait ExtensionTrait
     }
 
     /**
+     * Add pi_flexform in own Configuration Tab
+     * @param string $cType
+     */
+    protected function addPiFlexFormInConfigTabForCType(string $cType): void
+    {
+        ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            '--div--;Configuration,pi_flexform,',
+            $cType,
+            'after:subheader',
+        );
+    }
+
+    /**
      * Set $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature]
      * @param string $value
      */

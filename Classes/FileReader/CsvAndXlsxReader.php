@@ -60,7 +60,7 @@ class CsvAndXlsxReader
         $csv = [];
 
         foreach ($lines as $line) {
-            $row = \str_getcsv($line, $this->options['separator']);
+            $row = \str_getcsv($line, $this->options['separator'], '"', '\\');
             $csv[] = $row;
         }
 
