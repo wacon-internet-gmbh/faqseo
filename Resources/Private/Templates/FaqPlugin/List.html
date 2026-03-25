@@ -1,6 +1,7 @@
 <f:layout name="Plugin"/>
 
 <f:section name="Main">
+    <f:render partial="Assets" arguments="{settings: settings}" />
     <f:if condition="{faqs}">
         <div class="accordion" id="c{data.uid}">
             <f:for each="{faqs}" as="faq" iteration="i">

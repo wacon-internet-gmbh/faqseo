@@ -8,12 +8,7 @@
     <f:section name="Header"></f:section>
     <f:section name="Footer"></f:section>
     <f:section name="Main">
-        <f:if condition="{settings.assets.faq.css}">
-            <f:asset.css identifier="faqseo_faq" href="{settings.assets.faq.css}" />
-        </f:if>
-        <f:if condition="{settings.assets.faq.js}">
-            <f:asset.script identifier="faqseo_faq" src="{settings.assets.faq.js}" />
-        </f:if>
+        <f:render partial="Assets" arguments="{settings: settings}" />
         <f:render partial="Faq/Accordion" arguments="{data: data, parentRecord: parentRecord}" />
         <script type="application/ld+json">
             <f:format.raw><faq:structuredData.faq item="{data}" /></f:format.raw>
