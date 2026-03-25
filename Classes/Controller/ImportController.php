@@ -57,13 +57,18 @@ final class ImportController extends ActionController
             return $this->redirect('uploadForm', null, null, ['id' => (int)$this->request->getQueryParams()['id']]);
         }
 
+        $importedRows = 0;
+
         foreach ($lines as $key => $line) {
             if ($uploadForm['skipFirstRow'] && $key == 0) {
                 continue;
             }
 
             $this->importRow($line);
+            $importedRows++;
         }
+
+        $this->addFlashMessage(LocalizationUtility::translate('backend.module.import.success', $this->extensionKey, [$importedRows]), '', ContextualFeedbackSeverity::OK);
 
         return $this->redirect('uploadForm', null, null, ['id' => (int)$this->request->getQueryParams()['id']]);
     }

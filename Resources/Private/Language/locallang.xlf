@@ -21,6 +21,9 @@
       <trans-unit id="backend.module.import.error.empty_file" resname="backend.module.import.error.empty_file">
 				<source>Uploaded file is empty</source>
 			</trans-unit>
+      <trans-unit id="backend.module.import.success" resname="backend.module.import.success">
+				<source>Successfully imported %s rows</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
