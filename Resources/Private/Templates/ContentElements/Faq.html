@@ -14,14 +14,7 @@
         <f:if condition="{settings.assets.faq.js}">
             <f:asset.script identifier="faqseo_faq" src="{settings.assets.faq.js}" />
         </f:if>
-        <div class="faq accordion-item">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{data.uid}" aria-expanded="false" aria-controls="collapse{data.uid}">{data.header}</button>
-            <div id="collapse{data.uid}" class="accordion-collapse collapse"{f:if(condition: parentRecord, then: ' data-bs-parent="#c{parentRecord.uid}')}">
-                <div class="accordion-body">
-                    <f:format.html>{data.bodytext}</f:format.html>
-                </div>
-            </div>
-        </div>
+        <f:render partial="Faq/Accordion" arguments="{data: data, parentRecord: parentRecord}" />
         <script type="application/ld+json">
             <f:format.raw><faq:structuredData.faq item="{data}" /></f:format.raw>
         </script>

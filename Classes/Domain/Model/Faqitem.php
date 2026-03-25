@@ -67,4 +67,17 @@ class Faqitem extends AbstractEntity
 
         return $this;
     }
+
+    /**
+     * Return FAQ as array for tt_content record
+     * @return array
+     */
+    public function getTtContentData(): array
+    {
+        return [
+            'uid' => $this->getUid(),
+            'header' => $this->getQuestion(),
+            'bodytext' => $this->getAnswer(),
+        ];
+    }
 }

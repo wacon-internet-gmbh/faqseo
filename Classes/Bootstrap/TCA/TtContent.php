@@ -20,6 +20,7 @@ namespace Wacon\FaqSeo\Bootstrap\TCA;
 use TYPO3\CMS\Core\Information\Typo3Version;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 use Wacon\FaqSeo\Bootstrap\Base;
 use Wacon\FaqSeo\Bootstrap\Traits\TcaTrait;
 use Wacon\FaqSeo\Registry\ContentRegistry;
@@ -38,6 +39,7 @@ class TtContent extends Base
         $this->dbTable = 'tt_content';
         $this->typo3MajorVersion = GeneralUtility::makeInstance(Typo3Version::class)->getMajorVersion();
         $this->addCTypeFAQ();
+        $this->registerPlugins();
     }
 
     private function addCTypeFAQ(): void
@@ -81,5 +83,20 @@ class TtContent extends Base
             ],
         ];
         $GLOBALS['TCA'][$this->dbTable]['ctrl']['typeicon_classes'][$key] = 'mimetypes-x-content-text-media';
+    }
+
+    /**
+     * ExtensionUtility::registerPlugin
+     */
+    private function registerPlugins(): void
+    {
+        ExtensionUtility::registerPlugin(
+            $this->getExtensionKeyAsNamespace(),
+            'List',
+            $this->getLLL('locallang_plugins.xlf:list.title'),
+            'tx-faqseo-svgicon',
+            'plugins',
+            $this->getLLL('locallang_plugins.xlf:list.description'),
+        );
     }
 }

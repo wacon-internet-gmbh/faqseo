@@ -1,0 +1,11 @@
+<f:layout name="Plugin"/>
+
+<f:section name="Main">
+    <f:if condition="{faqs}">
+        <div class="accordion" id="c{data.uid}">
+            <f:for each="{faqs}" as="faq" iteration="i">
+                <f:render partial="Faq/Accordion" arguments="{data: faq.ttContentData, parentRecord: data}" />
+            </f:for>
+        </div>
+    </f:if>
+</f:section>

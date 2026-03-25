@@ -1,6 +1,7 @@
 ## Version 1.1.0
 - [FEATURE] Add FaqItem Model
 - [FEATURE] Add Import Backend module
+- [FEATURE] Add Plugin to display all faq records
 
 ## Version 1.0.0
 - [TASK] Add FAQ Styling
