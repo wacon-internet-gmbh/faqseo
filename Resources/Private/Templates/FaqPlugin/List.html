@@ -1,3 +1,7 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:faq="http://typo3.org/ns/Wacon/FaqSeo/ViewHelpers"
+    data-namespace-typo3-fluid="true">
 <f:layout name="Plugin"/>
 
 <f:section name="Main">
@@ -10,3 +14,9 @@
         </div>
     </f:if>
 </f:section>
+<f:section name="StructuredData">
+    <script type="application/ld+json">
+        <f:format.raw><faq:structuredData.faq items="{faqs}" /></f:format.raw>
+    </script>
+</f:section>
+</html>

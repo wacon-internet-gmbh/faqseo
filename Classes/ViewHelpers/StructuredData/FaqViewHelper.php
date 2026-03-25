@@ -13,6 +13,7 @@ namespace Wacon\FaqSeo\ViewHelpers\StructuredData;
 
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use Wacon\FaqSeo\Bootstrap\Traits\ExtensionTrait;
+use Wacon\FaqSeo\Domain\Model\Faqitem;
 
 final class FaqViewHelper extends AbstractViewHelper
 {
@@ -55,13 +56,41 @@ final class FaqViewHelper extends AbstractViewHelper
         foreach ($items as $item) {
             $structuredData['mainEntity'][] = [
                 '@type' => 'Question',
-                'name' => $item['header'],
+                'name' => $this->getName($item),
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => \strip_tags($item['bodytext']),
+                    'text' => \strip_tags($this->getText($item)),
                 ],
             ];
         }
         return \json_encode($structuredData, JSON_HEX_TAG);
+    }
+
+    /**
+     * Get name for faq item for structured data
+     * @param Faqitem|array $item
+     * @return string
+     */
+    protected function getName($item): string
+    {
+        if (is_array($item)) {
+            return $item['header'] ?? $item['question'] ?? '';
+        }
+
+        return get_class($item) === Faqitem::class ? $item->getQuestion() : '';
+    }
+
+    /**
+     * Get text for faq item for structured data
+     * @param Faqitem|array $item
+     * @return string
+     */
+    protected function getText($item): string
+    {
+        if (is_array($item)) {
+            return $item['bodytext'] ?? $item['answer'] ?? '';
+        }
+
+        return get_class($item) === Faqitem::class ? $item->getAnswer() : '';
     }
 }
