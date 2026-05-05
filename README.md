@@ -9,7 +9,7 @@ This extension adds a new content element type "FAQ" to TYPO3, allowing you to c
 Download and install the [extension][1] with the extension manager module.
 
 #### 2.2 Installation with composer
-`composer req wacon/faqseo`
+`composer req wacon/faq-seo`
 
 
 #### 2.3 Configure in site set

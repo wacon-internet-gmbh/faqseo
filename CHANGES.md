@@ -1,3 +1,6 @@
+## Version 1.1.1
+- [DOCS] Set correct composer name in README.md
+
 ## Version 1.1.0
 - [FEATURE] Add FaqItem Model
 - [FEATURE] Add Import Backend module
