@@ -1,3 +1,6 @@
+## Version 1.1.2
+- [TASK] Raise TYPO3 ^14.0 to ^14.3
+
 ## Version 1.1.1
 - [DOCS] Set correct composer name in README.md
 

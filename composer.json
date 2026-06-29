@@ -3,16 +3,16 @@
     "type": "typo3-cms-extension",
     "description": "This extension adds a new content element type 'FAQ' to TYPO3, allowing you to create and manage frequently asked questions with enhanced SEO features. It provides a user-friendly interface for content editors to input questions and answers, and it automatically generates structured data (JSON-LD) for improved search engine visibility.",
     "license": "GPL-2.0-or-later",
-	"version": "1.1.0",
+	"version": "1.1.2",
     "require": {
         "php": ">= 8.3 < 8.5",
-        "typo3/cms-backend": "^13.4 || ^14.0",
-        "typo3/cms-core": "^13.4 || ^14.0",
+        "typo3/cms-backend": "^13.4 || ^14.3",
+        "typo3/cms-core": "^13.4 || ^14.3",
 		"shuchkin/simplexlsx": "^1.0"
     },
     "require-dev": {
 		"typo3/cms-composer-installers": "^5.0",
-		"typo3/cms-install": "^13.4 || ^14.0",
+		"typo3/cms-install": "^13.4 || ^14.3",
 		"typo3/testing-framework": "^8",
 		"typo3/coding-standards": "^0.8",
 		"phpunit/phpunit": "^10 || ^12.5",
